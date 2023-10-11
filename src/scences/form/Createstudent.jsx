@@ -50,7 +50,7 @@ const Createstudent = () => {
             <main className="content">
             <Topbar />
             <div className="FORM">
-            <h1>Create Student</h1>
+            <h1 className="h1-form">Create Student</h1>
             <fieldset>
                 <form action="#" method="get">
                     <label for="name">Enter Name:</label>
@@ -97,7 +97,7 @@ const Createstudent = () => {
                         required
                     />
                     <br />
-                    <button type="submit" value="Submit" onClick={Submit}>
+                    <button className="btn-form1" type="submit" value="Submit" onClick={Submit}>
                         Submit
                     </button>
                 </form>

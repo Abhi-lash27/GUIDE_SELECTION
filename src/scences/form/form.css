@@ -7,7 +7,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  h1 {
+  .h1-form {
     text-align: center;
     color: white;
   }
@@ -27,7 +27,7 @@
     border-radius: 4px;
   }
   
-  button {
+  .btn-form1 {
     background-color: #4caf50;
     color: white;
     padding: 10px;
@@ -36,6 +36,6 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .btn-form1:hover {
     background-color: #45a049;
   }

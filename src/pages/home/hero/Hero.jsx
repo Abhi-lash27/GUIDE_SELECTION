@@ -9,7 +9,7 @@ const Hero = () => {
     <section className='hero-homepage'>
         <div className='container-homepage'>
             <div className='row-homepage'>
-                <h1>WELCOME..</h1>
+                <h1 className='welcome-homepage'>WELCOME..</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat temporibus commodi similique veniam quas facere dolores alias! Ad, numquam expedita culpa molestiae doloremque similique. Repellat neque laboriosam iste corrupti eos!</p>
                 <div className='button-homepage'>
                     <button className='primary-btn-homepage-1'>
