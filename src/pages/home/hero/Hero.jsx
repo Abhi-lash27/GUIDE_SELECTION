@@ -1,7 +1,7 @@
 import React from 'react'
 import './hero.css'
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (

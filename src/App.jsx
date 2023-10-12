@@ -1,6 +1,6 @@
 import React from 'react'
 import "./App.css"
-import { BrowserRouter as Router, Switch,Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Home from './pages/home/Home'
 import GuideList from './pages/guidelist/Guidelist'
 import Register from './pages/register/Register'
@@ -31,32 +31,32 @@ const App = () => {
   return (
     <>
     <Router>
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/guide-list' component={GuideList} />
-        <Route path='/register' component={Register} />
-        <Route path='/admin-login' component={Admin} />
-        <Route path='/staff-login' component={Staff} />
-        <Route path='/student-login' component={Student} />
-        <Route path='/admin-dashboard' component={AdminDashboard} />
-        <Route path='/staff-dashboard' component={StaffDashboard} />
-        <Route path='/student-dashboard' component={StudentDashboard} />
-        <Route path='/create-staff' component={Createstaff} />
-        <Route path='/create-student' component={Createstudent} />
-        <Route path='/student-upload-ppt' component={PPTUpload} />
-        <Route path='/student-upload-report' component={ReportUpload} />
-        <Route path='/student-review-form' component={StudentReviewForm} />
-        <Route path='/student-data-admin' component={StudentInfoAdmin} />
-        <Route path='/student-data-staff' component={StudentInfoStaff} />
-        <Route path='/staff-data-admin' component={StaffInfoAdmin} />
-        <Route path='/admin-ppt' component={Pptdownloadadmin} />
-        <Route path='/admin-reports' component={Reportdownloadadmin} />
-        <Route path='/admin-review-form' component={Reviewdownloadadmin} />
-        <Route path='/staff-ppt' component={Pptdownloadstaff} />
-        <Route path='/staff-reports' component={Reportdownloadstaff} />
-        <Route path='/staff-review-form' component={Reviewdownloadstaff} />
-        <Route path='/register-project' component={ProjectRegister} />
-      </Switch>
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/guide-list' element={<GuideList />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/admin-login' element={<Admin />} />
+        <Route path='/staff-login' element={<Staff />} />
+        <Route path='/student-login' element={<Student />} />
+        <Route path='/admin-dashboard' element={<AdminDashboard />} />
+        <Route path='/staff-dashboard' element={<StaffDashboard />} />
+        <Route path='/student-dashboard' element={<StudentDashboard />} />
+        <Route path='/create-staff' element={<Createstaff />} />
+        <Route path='/create-student' element={<Createstudent />} />
+        <Route path='/student-upload-ppt' element={<PPTUpload />} />
+        <Route path='/student-upload-report' element={<ReportUpload />} />
+        <Route path='/student-review-form' element={<StudentReviewForm />} />
+        <Route path='/student-data-admin' element={<StudentInfoAdmin />} />
+        <Route path='/student-data-staff' element={<StudentInfoStaff />} />
+        <Route path='/staff-data-admin' element={<StaffInfoAdmin />} />
+        <Route path='/admin-ppt' element={<Pptdownloadadmin />} />
+        <Route path='/admin-reports' element={<Reportdownloadadmin />} />
+        <Route path='/admin-review-form' element={<Reviewdownloadadmin />} />
+        <Route path='/staff-ppt' element={<Pptdownloadstaff />} />
+        <Route path='/staff-reports' element={<Reportdownloadstaff />} />
+        <Route path='/staff-review-form' element={<Reviewdownloadstaff />} />
+        <Route path='/register-project' element={<ProjectRegister />} />
+      </Routes>
     </Router>
     </>
   )
