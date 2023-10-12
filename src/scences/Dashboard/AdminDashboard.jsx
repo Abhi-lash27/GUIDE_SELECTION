@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import '../../index.css'
 import Topbar from "../global/Topbar";
 import AdminSidebar from "../global/AdminSidebar";
+import DataTable from "react-data-table-component";
 
 const AdminDashboard = () => {
   const [theme, colorMode] = useMode();

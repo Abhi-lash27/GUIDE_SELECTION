@@ -39,7 +39,7 @@ export const staffLogin = async (req, res) => {
       return res.json({ status: "success", user: token });
     } else {
       return res.json({ status: "error", user: false });
-    }
+  }
   
   };
 // To get all staff
