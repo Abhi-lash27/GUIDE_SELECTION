@@ -3,6 +3,7 @@ import {createStudent, getAllStudent,getSingleStudent, studentLogin, updateStude
 import {createStaff, getAllStaff, getSingleStaff,deleteStaff,staffLogin, updateStaff} from "./handlers/staff.js";
 import {createAdmin, adminLogin, getAllAdmin,getSingleAdmin,updateAdmin,deleteAdmin} from "./handlers/admin.js";
 import { getAllProjects, registerProject,getSingleProject,getGuideProject} from "./handlers/register.js";
+import { imgUpload } from "./modules/multer.js";
 
 const router = Router()
 
@@ -28,7 +29,7 @@ router.get('/staffs', getAllStaff)
 // get single staff
 router.get('/single-staff/:id', getSingleStaff)
 // staff signup
-router.post('/register-staff', createStaff)
+router.post('/register-staff', imgUpload.single("file"), createStaff)
 // staff login   
 router.post('/login-staff', staffLogin)
 // stude
