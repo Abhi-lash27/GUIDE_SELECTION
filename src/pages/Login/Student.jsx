@@ -25,7 +25,7 @@ const Student = () => {
     console.log(res);
     const data = await res.json();
     console.log(data);
-    if (data) {
+    if (data.token) {
       alert("success");
       window.location.href = "/student-dashboard";
     } else {

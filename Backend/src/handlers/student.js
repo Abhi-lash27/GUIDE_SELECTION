@@ -29,9 +29,9 @@ export const studentLogin = async (req, res) => {
   const user = await StudentModel.findOne({
     regno: req.body.regno,
   });
-
-  if (!user) {
-    res.json({ status: "error", error: "Invalid login" });
+console.log(user)
+  if (user === null) {
+    res.status(401);
   }
 
   const isPasswordValid = await comparePassword(
@@ -42,9 +42,9 @@ export const studentLogin = async (req, res) => {
   if (isPasswordValid) {
     const token = createJWTStudent(user);
 
-    return res.json({ status: "success", user: token });
+    return res.json({ token });
   } else {
-    return res.json({ status: "error", user: false });
+    return res.status(401);
   }
 
 };

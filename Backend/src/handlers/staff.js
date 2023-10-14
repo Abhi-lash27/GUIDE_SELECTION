@@ -1,22 +1,26 @@
 import StaffModel from "../models/staff.model.js";
 import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js";
-
 // create new staff
 
 export const createStaff = async (req, res) => {
     try {
-      const user = await StaffModel.create({
-        name: req.body.name,
-        email: req.body.email,
-        password: await hashPassword(req.body.password),
-        img: req.body.img,
-        specializations: req.body.specializations
-      });
-      res.json(user);
+        const { name } = req.body;
+        const { email } = req.body;
+        const  password  = await hashPassword(req.body.password);
+        const file = req.file.path;
+        const { specializations } = req.body;
+        const user = await StaffModel.create({
+            name,
+            email,
+            password,
+            file,
+            specializations,
+        });
+        res.json(user);
     } catch (err) {
-      console.error(err);
+        console.error(err);
     }
-  };
+};
 // staff login
 export const staffLogin = async (req, res) => {
     console.log(req.body);
@@ -38,8 +42,8 @@ export const staffLogin = async (req, res) => {
   
       return res.json({ status: "success", user: token });
     } else {
-      return res.json({ status: "error", user: false });
-    }
+      return res.json({ status: "error", user: false});
+  }
   
   };
 // To get all staff

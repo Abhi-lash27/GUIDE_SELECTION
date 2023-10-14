@@ -1,4 +1,4 @@
-import StaffModel from "../models/staff.model.js";
+// import StaffModel from "../models/staff.model.js";
 import { comparePassword, hashPassword, createJWTStaff} from "../modules/auth.js";
 import AdminModel from "../models/admin.model.js";
 

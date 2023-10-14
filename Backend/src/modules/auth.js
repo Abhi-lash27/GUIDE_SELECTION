@@ -11,9 +11,11 @@ export const hashPassword = (password) => {
 
 export const createJWTStudent = (user) => {
     const token = jwt.sign({
+
             name: user.name,
             regno: user.regno,
-            email: user.email
+            email: user.email,
+            role: "student"
         },
         "Sathyabama-Student"
     )
@@ -23,7 +25,8 @@ export const createJWTStudent = (user) => {
 export const createJWTStaff = (user) => {
     const token = jwt.sign({
             name: user.name,
-            email: user.email
+            email: user.email,
+            role: "staff"
         },
         "Sathyabama-Student"
     )
