@@ -67,7 +67,7 @@ const Createstudent = () => {
             <main className="content">
             <Topbar />
             <div className="FORM">
-            <h1>REGISTER PROJECT</h1>
+            <h1 className="h1-form">REGISTER PROJECT</h1>
             <fieldset>
                 <form action="#" method="get">
                     <label for="name">Enter Name:</label>
@@ -154,7 +154,7 @@ const Createstudent = () => {
                         </option>
                     ))}
                     </select>
-                    <button type="submit" value="Submit" onClick={Submit}>
+                    <button className="btn-form1" type="submit" value="Submit" onClick={Submit}>
                         Submit
                     </button>
                 </form>

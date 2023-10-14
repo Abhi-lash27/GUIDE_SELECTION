@@ -58,6 +58,17 @@ const Register = () =>  {
               required
             />
             <br />
+            <br />
+            <label>Password:</label>
+            <br />
+            <input className="field-register"
+              type="password"
+              name="batch"
+              id="batch"
+              placeholder="Enter your Batch"
+              required
+            />
+            <br />
           </div>
           <button type="submit" value="submit" className="btn-register">
             REGISTER
